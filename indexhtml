@@ -1,1 +1,1032 @@
-<! DOCTYPE html><html><head>
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UK Recovery Network | Vehicle Recovery Across the UK</title>
+
+    <meta name="description"
+          content="UK Recovery Network connects drivers and customers with vehicle recovery and transportation services throughout the United Kingdom.">
+
+    <meta name="theme-color" content="#101827">
+
+    <style>
+        :root {
+            --navy: #101827;
+            --navy-light: #1c293d;
+            --blue: #2563eb;
+            --orange: #f59e0b;
+            --white: #ffffff;
+            --light: #f3f6fb;
+            --text: #263244;
+            --muted: #64748b;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--white);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button, input, select, textarea {
+            font: inherit;
+        }
+
+        .container {
+            width: min(1120px, 92%);
+            margin: auto;
+        }
+
+        header {
+            background: var(--navy);
+            color: var(--white);
+            padding: 18px 0;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .logo span {
+            color: var(--orange);
+        }
+
+        .logo small {
+            display: block;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: #cbd5e1;
+            margin-top: 5px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: var(--orange);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 20px;
+            border: none;
+            border-radius: 7px;
+            background: var(--orange);
+            color: #111827;
+            font-weight: 700;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            filter: brightness(.95);
+        }
+
+        .button-blue {
+            background: var(--blue);
+            color: var(--white);
+        }
+
+        .hero {
+            background:
+                radial-gradient(circle at 85% 20%,
+                #31425c 0, transparent 38%),
+                linear-gradient(135deg, var(--navy), #18283e);
+            color: var(--white);
+            padding: 90px 0;
+        }
+
+        .hero-content {
+            max-width: 760px;
+        }
+
+        .eyebrow {
+            color: var(--orange);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: clamp(36px, 6vw, 60px);
+            line-height: 1.1;
+            margin-bottom: 22px;
+        }
+
+        .hero p {
+            color: #dbe5f2;
+            font-size: 18px;
+            max-width: 650px;
+            margin-bottom: 28px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .button-outline {
+            display: inline-block;
+            padding: 12px 20px;
+            border: 1px solid #aab8cb;
+            border-radius: 7px;
+            color: white;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .trust-strip {
+            background: var(--light);
+            padding: 22px 0;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            text-align: center;
+        }
+
+        .trust-grid strong {
+            display: block;
+            color: var(--navy);
+        }
+
+        .trust-grid span {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        section {
+            padding: 76px 0;
+        }
+
+        .section-heading {
+            max-width: 700px;
+            margin: 0 auto 38px;
+            text-align: center;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 14px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .card {
+            padding: 25px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 5px 20px rgba(15, 23, 42, .04);
+        }
+
+        .icon {
+            font-size: 32px;
+            margin-bottom: 14px;
+        }
+
+        .card h3 {
+            font-size: 19px;
+            color: var(--navy);
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .dark-section {
+            background: var(--navy);
+            color: white;
+        }
+
+        .dark-section .section-heading h2 {
+            color: white;
+        }
+
+        .dark-section .section-heading p {
+            color: #cbd5e1;
+        }
+
+        .areas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .area {
+            padding: 10px 16px;
+            border: 1px solid #43516a;
+            border-radius: 30px;
+            color: #e2e8f0;
+        }
+
+        .form-section {
+            background: var(--light);
+        }
+
+        .form-wrap {
+            max-width: 760px;
+            margin: auto;
+            padding: 32px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            box-shadow: 0 8px 30px rgba(15, 23, 42, .05);
+        }
+
+        .form-wrap h3 {
+            color: var(--navy);
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .form-intro {
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .field-full {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 7px;
+            background: white;
+            color: var(--text);
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: 2px solid #93c5fd;
+            border-color: var(--blue);
+        }
+
+        textarea {
+            min-height: 110px;
+            resize: vertical;
+        }
+
+        .form-note {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 14px;
+        }
+
+        .notice {
+            display: none;
+            margin-top: 18px;
+            padding: 14px;
+            border-radius: 8px;
+            background: #fff7ed;
+            border: 1px solid #fed7aa;
+            color: #9a3412;
+        }
+
+        .driver-section {
+            background: white;
+        }
+
+        .driver-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            align-items: start;
+        }
+
+        .driver-copy h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 18px;
+        }
+
+        .driver-copy p {
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        .check-list {
+            list-style: none;
+            margin: 22px 0;
+        }
+
+        .check-list li {
+            margin: 12px 0;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: #16a34a;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 30px;
+        }
+
+        .price-card {
+            padding: 26px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .price-card.featured {
+            border: 2px solid var(--orange);
+        }
+
+        .price-card h3 {
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+
+        .price {
+            font-size: 25px;
+            font-weight: 800;
+            margin: 14px 0;
+        }
+
+        .price-card p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .cta {
+            background: #fff7ed;
+            text-align: center;
+        }
+
+        .cta h2 {
+            color: var(--navy);
+            font-size: clamp(28px, 4vw, 40px);
+            margin-bottom: 14px;
+        }
+
+        .cta p {
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+
+        footer {
+            background: #0b1220;
+            color: #cbd5e1;
+            padding: 35px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        footer p {
+            font-size: 13px;
+        }
+
+        footer a {
+            color: white;
+        }
+
+        @media (max-width: 800px) {
+            .nav {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 14px;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .driver-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 65px 0;
+            }
+        }
+
+        @media (max-width: 520px) {
+            section {
+                padding: 55px 0;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .form-wrap {
+                padding: 22px 17px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .field-full {
+                grid-column: auto;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .hero-buttons a {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container nav">
+        <a class="logo" href="#home">
+            UK <span>RECOVERY</span>
+            <small>NETWORK</small>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="#services">Services</a>
+            <a href="#areas">Coverage</a>
+            <a href="#request">Request Recovery</a>
+            <a href="#drivers">For Drivers</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <div class="eyebrow">Your journey. Our network.</div>
+
+            <h1>Vehicle Recovery Across the UK</h1>
+
+            <p>
+                Connecting customers with independent vehicle recovery
+                professionals for breakdown recovery, vehicle transportation
+                and roadside assistance throughout the United Kingdom.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#request" class="button">
+                    Request Vehicle Recovery
+                </a>
+
+                <a href="#drivers" class="button-outline">
+                    Join Our Driver Network
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="trust-strip">
+        <div class="container trust-grid">
+            <div>
+                <strong>Nationwide Ambition</strong>
+                <span>Connecting recovery services across the UK</span>
+            </div>
+
+            <div>
+                <strong>Independent Drivers</strong>
+                <span>A network built around recovery professionals</span>
+            </div>
+
+            <div>
+                <strong>Simple Requests</strong>
+                <span>Clear information about your recovery needs</span>
+            </div>
+        </div>
+    </div>
+
+    <section id="services">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Our Recovery Services</h2>
+                <p>
+                    Find the type of vehicle recovery or transportation
+                    service you need.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <article class="card">
+                    <div class="icon">🚗</div>
+                    <h3>Breakdown Recovery</h3>
+                    <p>
+                        Assistance with moving a broken-down vehicle
+                        to your chosen destination.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="icon">🚚</div>
+                    <h3>Vehicle Transportation</h3>
+                    <p>
+                        Transportation for cars, vans and other
+                        suitable vehicles.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="icon">🛠️</div>
+                    <h3>Roadside Assistance</h3>
+                    <p>
+                        Request assistance when your vehicle
+                        encounters a problem on the road.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="icon">🚛</div>
+                    <h3>Van and Truck Recovery</h3>
+                    <p>
+                        Recovery enquiries for commercial vehicles,
+                        vans and heavy vehicles, subject to availability
+                        and suitable equipment.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="dark-section" id="areas">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Recovery Across the United Kingdom</h2>
+                <p>
+                    Our goal is to connect customers and recovery
+                    professionals across England, Scotland, Wales
+                    and Northern Ireland.
+                </p>
+            </div>
+
+            <div class="areas">
+                <span class="area">Newport</span>
+                <span class="area">Cardiff</span>
+                <span class="area">Bristol</span>
+                <span class="area">Birmingham</span>
+                <span class="area">Manchester</span>
+                <span class="area">Liverpool</span>
+                <span class="area">Leeds</span>
+                <span class="area">London</span>
+                <span class="area">Scotland</span>
+                <span class="area">Northern Ireland</span>
+                <span class="area">Across the UK</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="form-section" id="request">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Request Vehicle Recovery</h2>
+                <p>
+                    Provide your details and tell us what kind of
+                    assistance you require.
+                </p>
+            </div>
+
+            <div class="form-wrap">
+                <h3>Recovery Request Form</h3>
+
+                <p class="form-intro">
+                    Complete the details below to describe your
+                    vehicle recovery requirements.
+                </p>
+
+                <form id="recoveryForm">
+                    <div class="form-grid">
+
+                        <div class="field">
+                            <label for="customerName">Full Name</label>
+                            <input
+                                id="customerName"
+                                name="customerName"
+                                autocomplete="name"
+                                required
+                                placeholder="Your full name">
+                        </div>
+
+                        <div class="field">
+                            <label for="customerPhone">Phone Number</label>
+                            <input
+                                id="customerPhone"
+                                name="customerPhone"
+                                type="tel"
+                                autocomplete="tel"
+                                required
+                                placeholder="Your phone number">
+                        </div>
+
+                        <div class="field">
+                            <label for="vehicleType">Vehicle Type</label>
+                            <select id="vehicleType"
+                                    name="vehicleType" required>
+                                <option value="">Select vehicle</option>
+                                <option>Car</option>
+                                <option>Van</option>
+                                <option>Motorcycle</option>
+                                <option>Truck / HGV</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="serviceType">Required Service</label>
+                            <select id="serviceType"
+                                    name="serviceType" required>
+                                <option value="">Select service</option>
+                                <option>Breakdown Recovery</option>
+                                <option>Vehicle Transportation</option>
+                                <option>Roadside Assistance</option>
+                                <option>Van Recovery</option>
+                                <option>Truck / HGV Recovery</option>
+                            </select>
+                        </div>
+
+                        <div class="field field-full">
+                            <label for="pickup">
+                                Collection Location / Postcode
+                            </label>
+                            <input id="pickup"
+                                   name="pickup"
+                                   required
+                                   placeholder="Where is the vehicle?">
+                        </div>
+
+                        <div class="field field-full">
+                            <label for="destination">
+                                Destination / Delivery Postcode
+                            </label>
+                            <input id="destination"
+                                   name="destination"
+                                   placeholder="Where should it go?">
+                        </div>
+
+                        <div class="field field-full">
+                            <label for="details">
+                                Additional Information
+                            </label>
+                            <textarea id="details"
+                                      name="details"
+                                      placeholder="Describe the vehicle and the problem"></textarea>
+                        </div>
+
+                        <div class="field field-full">
+                            <button class="button button-blue"
+                                    type="submit">
+                                Prepare Recovery Request
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="form-note">
+                        Demo only: this form does not yet send your
+                        information to a recovery company or driver.
+                    </p>
+
+                    <div class="notice" id="recoveryNotice"
+                         role="status" aria-live="polite"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="driver-section" id="drivers">
+        <div class="container">
+            <div class="driver-grid">
+
+                <div class="driver-copy">
+                    <div class="eyebrow">For recovery professionals</div>
+
+                    <h2>Join the UK Recovery Network</h2>
+
+                    <p>
+                        Are you an independent recovery driver or
+                        a vehicle transportation business?
+                    </p>
+
+                    <p>
+                        Our goal is to build a network that connects
+                        recovery professionals with customers who need
+                        vehicle assistance.
+                    </p>
+
+                    <ul class="check-list">
+                        <li>Register your interest in joining</li>
+                        <li>Tell us about your recovery vehicle</li>
+                        <li>Choose the areas where you operate</li>
+                        <li>Explore future membership options</li>
+                    </ul>
+
+                    <a href="#driverForm" class="button">
+                        Register Your Interest
+                    </a>
+                </div>
+
+                <div class="form-wrap" id="driverForm">
+                    <h3>Driver Registration</h3>
+
+                    <p class="form-intro">
+                        Start by providing your basic business details.
+                    </p>
+
+                    <form id="driverRegistration">
+                        <div class="form-grid">
+
+                            <div class="field field-full">
+                                <label for="driverName">Full Name</label>
+                                <input id="driverName"
+                                       name="driverName"
+                                       autocomplete="name"
+                                       required
+                                       placeholder="Your full name">
+                            </div>
+
+                            <div class="field">
+                                <label for="driverPhone">Phone Number</label>
+                                <input id="driverPhone"
+                                       name="driverPhone"
+                                       type="tel"
+                                       required
+                                       placeholder="Your phone number">
+                            </div>
+
+                            <div class="field">
+                                <label for="driverBusiness">
+                                    Business Name
+                                </label>
+                                <input id="driverBusiness"
+                                       name="driverBusiness"
+                                       placeholder="Business name (optional)">
+                            </div>
+
+                            <div class="field">
+                                <label for="driverVehicle">
+                                    Recovery Vehicle
+                                </label>
+                                <select id="driverVehicle"
+                                        name="driverVehicle" required>
+                                    <option value="">Choose vehicle</option>
+                                    <option>Car Transporter</option>
+                                    <option>Recovery Truck</option>
+                                    <option>Van Recovery Vehicle</option>
+                                    <option>Heavy Recovery Vehicle</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <label for="driverArea">
+                                    Main Operating Area
+                                </label>
+                                <input id="driverArea"
+                                       name="driverArea"
+                                       required
+                                       placeholder="Town or postcode">
+                            </div>
+
+                            <div class="field field-full">
+                                <button class="button button-blue"
+                                        type="submit">
+                                    Submit Demo Registration
+                                </button>
+                            </div>
+                        </div>
+
+                        <p class="form-note">
+                            Demo only: registration details are not
+                            transmitted or stored by a server.
+                        </p>
+
+                        <div class="notice" id="driverNotice"
+                             role="status" aria-live="polite"></div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="form-section" id="membership">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Driver Membership Options</h2>
+                <p>
+                    Example membership plans for the future network.
+                    Prices and benefits have not yet been set.
+                </p>
+            </div>
+
+            <div class="pricing-grid">
+                <article class="price-card">
+                    <h3>Weekly Membership</h3>
+                    <div class="price">Coming Soon</div>
+                    <p>
+                        A potential flexible option for independent
+                        recovery drivers.
+                    </p>
+                    <a href="#driverForm" class="button button-blue">
+                        Register Interest
+                    </a>
+                </article>
+
+                <article class="price-card featured">
+                    <h3>Monthly Membership</h3>
+                    <div class="price">Coming Soon</div>
+                    <p>
+                        A potential monthly plan for recovery
+                        professionals joining the network.
+                    </p>
+                    <a href="#driverForm" class="button">
+                        Register Interest
+                    </a>
+                </article>
+
+                <article class="price-card">
+                    <h3>Six-Month Membership</h3>
+                    <div class="price">Coming Soon</div>
+                    <p>
+                        A potential longer-term membership option.
+                    </p>
+                    <a href="#driverForm" class="button button-blue">
+                        Register Interest
+                    </a>
+                </article>
+            </div>
+
+            <p class="form-note" style="text-align:center; margin-top:20px;">
+                No membership payments are collected on this demo website.
+            </p>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Need Vehicle Recovery?</h2>
+
+            <p>
+                Tell us what you need using the recovery request form.
+            </p>
+
+            <a href="#request" class="button">
+                Request Recovery
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container footer-content">
+        <a class="logo" href="#home">
+            UK <span>RECOVERY</span>
+            <small>NETWORK</small>
+        </a>
+
+        <p>
+            © <span id="year"></span> UK Recovery Network.
+            Demo website.
+        </p>
+
+        <p>Vehicle recovery across the United Kingdom.</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+    function setupDemoForm(formId, noticeId, message) {
+        const form = document.getElementById(formId);
+        const notice = document.getElementById(noticeId);
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            if (!form.reportValidity()) {
+                return;
+            }
+
+            notice.textContent = message;
+            notice.style.display = "block";
+
+            notice.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest"
+            });
+        });
+    }
+
+    setupDemoForm(
+        "recoveryForm",
+        "recoveryNotice",
+        "Demo only: your details have NOT been sent. " +
+        "The website needs a connected submission service " +
+        "before real recovery requests can be received."
+    );
+
+    setupDemoForm(
+        "driverRegistration",
+        "driverNotice",
+        "Demo only: your registration has NOT been sent or saved " +
+        "to a server. A registration service must be connected " +
+        "before this feature can be used for real."
+    );
+</script>
+
+</body>
+</html>
